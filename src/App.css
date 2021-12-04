@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +38,154 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: end
+  ;
+}
+
+.bg-light{
+  height: 6vw;
+}
+
+.navbar-brand{
+  font-size: 1.75rem;
+  padding: 2vw;
+  color: white !important;
+}
+
+.d-flex{
+  height: 4vw;
+  width: 35vw;
+  margin-right: 2vw;
+  background-color: white;
+  border: 1px solid #ced4da;
+}
+
+.bg-light{
+  background-color: #1f1f7c !important;
+}
+
+.btn{
+  width: 15vw;
+  background-color: #1f1f7c;
+  color: white;
+}
+
+
+.me-2{
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 0;
+  /* outline:none !important; */
+
+}
+
+.btn{
+  /* outline:none !important; */
+  /* border-left: 0; */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid #1f1f7c;
+}
+
+
+.btn:hover{
+  background-color: #1f1f7c;
+  
+}
+
+.d-flex:hover{
+  box-shadow: 3px 9px 18px -12px black;
+}
+
+
+.me-2 {
+  margin-right: 0!important;
+}
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow:  3px 9px 18px -12px black;
+  box-shadow:  3px 9px 18px -9px black;
+}
+
+.btn:focus{
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow:  3px 9px 0px -29px black;
+  box-shadow:  3px 9px 0px -29px black;
+
+}
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.weatherMainCard{
+  width: 70vw;
+  /* height: 50vh; */
+  margin: 3vw;
+  display: flex;
+  position: relative;
+  padding: 2vw;
+  background: #1c1c72;
+  
+}
+
+.weather-container{
+  display: flex;
+  justify-content: center;
+  margin: 2vw;
+}
+
+
+.date{
+  font-size: 2vw;
+  /* text-align: end; */
+}
+
+
+.countryName{
+  width: 35vw;
+  text-align: left;
+  height: 12vw;
+  color: white;
+  font-size: 4vw;
+}
+
+.weatherName{
+  display: flex;
+  height: 22vh;
+  padding-bottom: 4vw;
+}
+
+.degree{
+  height: 20vh;
+  width: 15vw;
+  font-size: 6vw;
+  color: white;
+  margin-left: 3vw;
+}
+
+.weatherType{
+  height: 20vh;
+}
+
+img{
+  width: 10vw;
+  height: 10vw;
+}
+
+.line{
+  width: 0.01vw;
+  position: absolute;
+  height: 38vh;
+  right: 35vw;
+  background: white;
+  bottom: 3.5vw;
+}
+
