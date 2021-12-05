@@ -181,11 +181,34 @@ img{
 }
 
 .line{
-  width: 0.01vw;
-  position: absolute;
-  height: 38vh;
+  width: 0.03vw;
+  /* height: 38vh; */
   right: 35vw;
   background: white;
-  bottom: 3.5vw;
 }
 
+
+.weatherDetails{
+  color: white;
+  width: inherit;
+}
+
+.weatherTitle{
+  font-size: 3vw;
+  margin-bottom:  3vw;
+}
+
+.latitude, .longitude, .wind, .sky{
+  display: flex;
+  justify-content: space-between;
+  width: 17vw;
+}
+
+.latContainer, .lonContainer, .windContainer, .skyContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.lonVal, .latVal , .windSpeed, .skyDescription{
+  width: 50px;
+}
