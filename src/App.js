@@ -13,16 +13,26 @@ function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
-  const search = evt => {
+  const search = (evt, e) => {
+    e.preventDefault();
     if (evt.key === "Enter") {
       fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
       .then(res => res.json())
       .then(result => {
         setWeather(result);
         setQuery('');
-        // console.log(result);
       });
     }
+  }
+
+  const searchb = (e) => {
+    e.preventDefault();
+    fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
+      .then(res => res.json())
+      .then(result => {
+        setWeather(result);
+        setQuery('');
+      });
   }
 
   return (
@@ -35,7 +45,7 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             
-            {/* <form className="d-flex"> */}
+            <form className="d-flex">
               <input 
               className="form-control me-2" 
               type="text" 
@@ -43,10 +53,14 @@ function App() {
               aria-label="Search" 
               onChange={e => setQuery(e.target.value)}
               value={query}
-              onKeyPress={search}
+              onKeyPress={(e) => search}
               />
-              {/* <button className="btn btn-outline-success" >Search</button> */}
-            {/* </form> */}
+              <button 
+                className="btn btn-outline-success"
+                onClick={searchb} 
+               >Search
+               </button>
+            </form>
           </div>
         </div>
       </nav>
