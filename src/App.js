@@ -1,26 +1,64 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Weather from './components/WEATHER';
+import React, { useState } from 'react';
+
+const api = {
+  key: "4ee7f25342979a8311be40961af3300f",
+  base: "https://api.openweathermap.org/data/2.5/"
+}
+
 function App() {
+
+  const [query, setQuery] = useState('');
+  const [weather, setWeather] = useState({});
+
+  const search = evt => {
+    if (evt.key === "Enter") {
+      fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
+      .then(res => res.json())
+      .then(result => {
+        setWeather(result);
+        setQuery('');
+        // console.log(result);
+      });
+    }
+  }
+
   return (
     <div className="App">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">sHoW wEaThEr</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">sHoW wEaThEr</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Your City" aria-label="Search" />
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            {/* <form className="d-flex"> */}
+              <input 
+              className="form-control me-2" 
+              type="text" 
+              placeholder="Your City" 
+              aria-label="Search" 
+              onChange={e => setQuery(e.target.value)}
+              value={query}
+              onKeyPress={search}
+              />
+              {/* <button className="btn btn-outline-success" >Search</button> */}
+            {/* </form> */}
           </div>
         </div>
       </nav>
-
-      <Weather />
+      <div>
+                {(typeof weather.main != "undefined") ? (
+                  <Weather weathers={weather}/>
+                    ) : (
+                <div>
+                    ('')
+                </div>
+                )}
+            </div>
     </div>
   );
 }
