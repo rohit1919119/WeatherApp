@@ -1,0 +1,67 @@
+
+.body{
+    width: 100%;
+    height: 100vh;
+    background-color: #21204e;
+  }
+  
+  .btnbtn{
+    background-color: #ad2424;
+    width: 17vw;
+    height: 7.02vh;
+    border: 0;
+  }
+  
+  .welcomeImg1{
+    width: 20vw ;
+    height: 19vw;
+  }
+  
+  
+  .welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+  }
+  
+  .welcomeTitle{
+    color: white;
+    font-size: 4vw;
+  }
+  
+  
+  .inputSearch{
+    width: 2vw;
+    border: 0;
+    height: 7vh;
+  }
+  
+  
+  .frontSearch{
+    width: 62vw;
+    display: flex;
+    margin-top: 10vw;
+  }
+  
+  .frontPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btnbtn:hover{
+    background-color: #ad2424 ;
+    /* box-shadow: 8px 6px 23px -2px black; */
+    box-shadow: 8px 6px 20px -1px black;
+  
+  }
+  
+  
+  .inputSearch:hover{
+    box-shadow: 8px 6px 23px -2px black;
+  
+  }
+  
+  

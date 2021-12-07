@@ -1,87 +1,137 @@
 import react from "react";
 import Sunny from '../sun.png';
 
-function weather(){
+function weather({weathers}){
+
+
+
+    const dateBuilder = (d) => {
+        let months = ["January", "Feburuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        let day = days[d.getDay()];
+        let date = d.getDate();
+        let month = months[d.getMonth()];
+        let year = d.getFullYear();
+
+        return `${day} ${date} ${month} ${year}`
+    }
+
+
     return(
-        <div className="weather-container">
-            <div className="weatherMainCard">
-                <div className="weatherCard1">
-
-                    <div className="countryName">
-                        
-                        <div className="state">Toronto, Canada</div>
-                        <div className="date">Sunday, December 5</div>
-    
-                    </div>
-                    
-                    <div className="weatherName">
-                        
-                        <div className="weatherType">
-                            <img src={Sunny} alt="" />
+            <div className="weather-container">
+                <div className="weatherMainCard">
+                    <div className="weatherCard1">
+                        <div className="countryName">
+                            <div className="state">{weathers.name}, {weathers.sys.country}</div>
+                            <div className="date">{dateBuilder(new Date())}</div>
                         </div>
-                        <div className="degree">
-                        50 &#8451;
+                        
+                        <div className="weatherName">
+                            
+                            <div className="weatherType">
+                                <img src={Sunny} alt="" />
+                            </div>
+                            <div className="degree">
+                                {Math.round(weathers.main.temp)}
+                            &#8451;
+                            </div>
+
                         </div>
+                    </div>
+
+                    <div className="line">
 
                     </div>
-                </div>
-
-                <div className="line">
-
-                </div>
 
 
                 <div className="weatherDetails">
-                    <div className="weatherTitle">Sunny</div>
-                    <div className="latContainer">
+                    <div className="weatherTitle">what a sunny day!</div>
 
-                    <div className="latitude">
-                        <p>latitude</p>
-                        <div className="latVal">
-                        <p>37.8</p>
-                        </div>
-                    </div>
-                    </div>
 
-                    <div className="lonContainer">
-
-                    <div className="longitude">
-                        <p>longitude</p>
-                        <div className="lonVal">
-                        <p>- 19.08</p>
-                        </div>
-
-                    </div>
-                    </div>
+                   
 
                     <div className="windContainer">
 
                     <div className="wind">
-                        <p>wind speed</p>
+                        <p>wind </p>
+                        <div className="windSpeed">
+                        <p> 700</p>
+                        
+                        </div>
+                        <p>m/s</p>
+
+                    </div>
+                    <div className="wind">
+                        <p>humidity</p>
+                        <div className="windSpeed">
+                        <p> 20</p>
+                        
+                        </div>
+                        <p>%</p>
+
+                    </div>
+                    <div className="wind">
+                        <p>pressure</p>
                         <div className="windSpeed">
                         <p> 100.3</p>
+                        
                         </div>
+                        <p>hPa</p>
 
                     </div>
                     </div>
 
-                    <div className="skyContainer">
+
+
+                    <div className="windContainer">
+
+                    <div className="wind">
+                        <p>min. temp</p>
+                        <div className="windSpeed">
+                        <p> 100.3</p>
+                        
+                        </div>
+                        <p>kelvin</p>
+
+                    </div>
+                    <div className="wind">
+                        <p>max. temp</p>
+                        <div className="windSpeed">
+                        <p> 10</p>
+                        
+                        </div>
+                        <p>Kelvin</p>
+
+                    </div>
+                    <div className="wind">
+                        <p>cloudiness</p>
+                        <div className="windSpeed">
+                        <p> 100.3</p>
+                        
+                        </div>
+                        <p>%</p>
+
+                    </div>
+                    </div>
+
+                    {/* <div className="skyContainer">
 
                     <div className="sky">
-                        <p>wind speed</p>
+                        <p>sky</p>
                         <div className="skyDescription">
                         <p> clear</p>
                         </div>
 
                     </div>
+                    </div> */}
+
+
                     </div>
-
-
+                
                 </div>
-            
-            </div>
 
-        </div>
+            </div>
     )
 }
 
