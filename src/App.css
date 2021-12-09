@@ -2,7 +2,9 @@
   text-align: center;
 }
 
-
+p{
+  margin: 0;
+}
 
 .App-logo {
   height: 40vmin;
@@ -126,14 +128,14 @@
 }
 
 .weatherMainCard{
-  width: 70vw;
+  width: 32vw;
   /* height: 50vh; */
-  margin: 3vw;
+  margin: 6vh;
   display: flex;
   position: relative;
   padding: 2vw;
   background: #1c1c72;
-  
+  animation: CardAni 2.1s linear 1s forwards;
 }
 
 .weather-container{
@@ -143,6 +145,8 @@
 }
 
 
+
+
 .date{
   font-size: 2vw;
   /* text-align: end; */
@@ -150,7 +154,8 @@
 
 
 .countryName{
-  width: 35vw;
+  width: 34vw;
+  font-family: 'Readex Pro', sans-serif;
   text-align: left;
   height: 12vw;
   color: white;
@@ -159,7 +164,7 @@
 
 .weatherName{
   display: flex;
-  height: 22vh;
+  /* height: 22vh; */
   padding-bottom: 4vw;
 }
 
@@ -181,11 +186,71 @@ img{
 }
 
 .line{
-  width: 0.01vw;
-  position: absolute;
-  height: 38vh;
+  width: 0.03vw;
+  /* height: 38vh; */
   right: 35vw;
   background: white;
-  bottom: 3.5vw;
 }
+
+
+.weatherDetails{
+  color: white;
+  width: inherit;
+  /* display: ; */
+  visibility: hidden;
+  animation: sideCardAni 3s ease-in-out 4s forwards;
+}
+
+.weatherTitle{
+  font-size: 3vw;
+  margin-bottom:  0vw;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.latitude, .longitude, .wind, .sky{
+  display: flex;
+  justify-content: space-between;
+  width: 10vw;
+  background: #1c1552;
+  flex-direction: column;
+  font-size: 1vw;
+  margin: 1vw;
+  padding: 1vw;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.latContainer, .lonContainer, .windContainer, .skyContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.lonVal, .latVal , .windSpeed, .skyDescription{
+  font-size: 3vw;
+}
+
+
+
+@keyframes CardAni {
+  0%{
+    width: 32vw;
+  }
+
+  100%{
+    width: 75vw;
+  }
+  
+}
+
+
+@keyframes sideCardAni {
+  0%{
+    visibility: hidden;
+  }
+  100%{
+    visibility: visible;
+  }
+  
+}
+
 

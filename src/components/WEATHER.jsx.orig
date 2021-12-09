@@ -1,7 +1,7 @@
 import react from "react";
 import Sunny from '../sun.png';
 
-function Weather({weathers}){
+function weather({weathers}){
 
 
 
@@ -56,7 +56,7 @@ function Weather({weathers}){
                     <div className="wind">
                         <p>wind </p>
                         <div className="windSpeed">
-                        <p>{Math.round(weathers.wind.speed)}</p>
+                        <p> 700</p>
                         
                         </div>
                         <p>m/s</p>
@@ -65,7 +65,7 @@ function Weather({weathers}){
                     <div className="wind">
                         <p>humidity</p>
                         <div className="windSpeed">
-                        <p>{weathers.main.humidity}</p>
+                        <p> 20</p>
                         
                         </div>
                         <p>%</p>
@@ -74,7 +74,7 @@ function Weather({weathers}){
                     <div className="wind">
                         <p>pressure</p>
                         <div className="windSpeed">
-                        <p>{weathers.main.pressure}</p>
+                        <p> 100.3</p>
                         
                         </div>
                         <p>hPa</p>
@@ -89,38 +89,41 @@ function Weather({weathers}){
                     <div className="wind">
                         <p>min. temp</p>
                         <div className="windSpeed">
-                        <p>{Math.round(weathers.main.temp_min)}</p>
+                        <p> 100.3</p>
                         
                         </div>
-                        <p>C</p>
+                        <p>kelvin</p>
 
                     </div>
                     <div className="wind">
                         <p>max. temp</p>
                         <div className="windSpeed">
-                        <p>{Math.round(weathers.main.temp_max)}</p>
+                        <p> 10</p>
                         
                         </div>
-                        <p>C</p>
+                        <p>Kelvin</p>
 
                     </div>
                     <div className="wind">
                         <p>cloudiness</p>
                         <div className="windSpeed">
-                        <p>{weathers.clouds.all}</p>
+                        <p> 100.3</p>
                         
                         </div>
                         <p>%</p>
 
+                        </div>
                     </div>
                     </div>
 
                     {/* <div className="skyContainer">
+
                     <div className="sky">
                         <p>sky</p>
                         <div className="skyDescription">
                         <p> clear</p>
                         </div>
+
                     </div>
                     </div> */}
 
@@ -133,4 +136,4 @@ function Weather({weathers}){
     )
 }
 
-export default Weather;
+export default weather;
