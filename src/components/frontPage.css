@@ -41,9 +41,20 @@
   .frontSearch{
     width: 62vw;
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10vw;
   }
   
+
+  .yoyo{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8vh;
+  }
+
   .frontPage{
     display: flex;
     flex-direction: column;
@@ -64,4 +75,122 @@
   
   }
   
+  @media only screen and (max-width: 700px) {
   
+    .welcomeTitle{
+      font-size: 3.8vh;
+    }
+    .welcomeImg1{
+      width: 38vw;
+      height: 32vw;
+   
+    }
+    .yoyo{
+      height: 65vh;
+      margin: 0;
+    }
+  
+    .frontSearch{
+      width: 85vw;
+      margin-top: 13vh;
+    }
+  
+    .btnbtn{
+      width: 17vh;
+    }
+
+    .navbar-brand{
+      font-size: 4vh;
+    }
+
+    .bg-light{
+      height: auto;
+    }
+
+    .d-flex{
+      height: auto;
+      width: auto;
+      margin-right: 2vw;
+    }
+
+    .btn{
+      width: 23vh;
+    }
+
+    .navbar-expand-lg .navbar-collapse{
+      margin-top: 4vh;
+    }
+
+    .weatherMainCard{
+      flex-direction: column;
+    }
+
+    .weatherCard1{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .countryName{
+      width: auto;
+      font-size: 6vh;
+    }
+
+    .date{
+      font-size: 4vw;
+    }
+
+    .line{
+      display: none;
+    }
+
+    .weatherName{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      height: auto;
+      margin-top: 16vw;
+    }
+
+    .degree{
+      height: auto;
+      width: 15vh; 
+      font-size: 6vh;
+      /* margin-right: 5vh; */
+      margin: 0;
+    }
+
+    .weatherImage{
+      width: 10vh !important;
+      height: 10vh !important;
+    }
+
+    .weatherTitle{
+      font-size: 4vh;
+      margin: 4vw 0;
+    }
+
+    .weatherDetails{
+      width: auto;
+    }
+
+    .weatherType{
+      height: auto;
+    }
+
+    .wind{
+      font-size: 2vh;
+      width: -webkit-fill-available;
+
+    }
+
+    .windSpeed{
+      font-size: 4vh;
+
+    }
+
+    .windContainer{
+      justify-content: center;
+    }
+
+  }

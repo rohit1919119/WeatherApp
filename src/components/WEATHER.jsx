@@ -30,7 +30,7 @@ function Weather({weathers}){
                         <div className="weatherName">
                             
                             <div className="weatherType">
-                                <img src={Sunny} alt="" />
+                                <img className="weatherImage" src={Sunny} alt="" />
                             </div>
                             <div className="degree">
                                 {Math.round(weathers.main.temp)}
