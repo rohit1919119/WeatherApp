@@ -74,8 +74,21 @@
     box-shadow: 8px 6px 23px -2px black;
   
   }
+
+  .pre{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    font-size: .75em;
+    font-family: var(--bs-font-monospace);
+    /* font-size: 1em; */
+    box-sizing: border-box;
+    direction: ltr;
+    unicode-bidi: bidi-override;
+  }
   
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 780px) {
   
     .welcomeTitle{
       font-size: 3.8vh;
@@ -172,6 +185,8 @@
 
     .weatherDetails{
       width: auto;
+      visibility: visible;
+      animation: none;
     }
 
     .weatherType{
@@ -193,7 +208,39 @@
       justify-content: center;
     }
 
+    .weatherMainCard{
+      animation: none;
+      width: 75vw;
+    }
+  
+    pre{
+      width: 100%;
+      height: auto;
+      font-size: 3vh;
+      margin-top: 4vh;
+      text-align: center;
+    }
+
+    .pre{
+      font-size: 2.75vh;
+      text-align: center;
+    }
+  
+    .welcome{
+      flex-direction: column;
+    }
+  
+    .welcomeImg{
+      width: 15vh !important;
+      height: 20vh !important ;
+      margin-right: 2vw;
+    }
+  
+    .frontPage1{
+      margin-top: 3vh !important;
+    }
   }
+
 
   .loading {
     width: 200px;

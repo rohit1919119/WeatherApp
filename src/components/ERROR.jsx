@@ -19,9 +19,9 @@ function Error(){
                   </span>
   
                   <span className="welcomeTitle1">
-                    <pre>
+                    <p className='pre'>
                       Because this place doesn't belong to Mother Earth.
-                    </pre> 
+                    </p> 
                   </span>
                 </div>
             </div>
