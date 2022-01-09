@@ -28,7 +28,7 @@ function FrontPage(){
           setWeather(result);
           setQuery('');
           setLoading(false)
-          // console.log(result)
+          console.log(result)
         }
         )
         setShow(false);

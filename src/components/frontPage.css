@@ -256,3 +256,88 @@
     justify-content: center;
     align-items: center;
   }
+
+  .convertbtn {
+    width: 30%;
+    width: auto;
+    min-height: 13%;
+    height: auto;
+    background: #1c1552;
+    border: 1px white solid;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    transition: .5s;
+    padding: 0px 10px 0px 10px;
+    color: white;
+  }
+
+  .convertbtn:hover {
+    width: 30%;
+    width: auto;
+    height: 15%;
+    height: auto;
+    background: #ad2424;
+    border: 0px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    transition: .5s;
+    color: white;
+  }
+
+  .celsius {
+    transition: .5s;
+    color: white;
+  }
+
+  .fahrenheit {
+    transition: .5s;
+    color: white;
+  }
+
+  .show-it {
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    /* animation-delay: -.1s; */
+  }
+
+  .hide-it {
+    animation-name: fade-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    /* animation-delay: -.1s; */
+  }
+
+
+
+
+
+
+  @keyframes fade-in {
+    0% {
+      /* color: aqua; */
+      opacity: 1;
+    } 5% {
+      /* color: #ad2424; */
+      opacity: 0;
+    }
+    100% {
+     /* color: aqua; */
+     opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      /* color: aqua; */
+      opacity: 1;
+    }
+    5% {
+      /* color: #ad2424; */
+      opacity: 0;
+    }
+    100% {
+      /* color: aqua; */
+      opacity: 1;
+    }
+  }

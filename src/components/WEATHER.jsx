@@ -1,9 +1,28 @@
 // import react from "react";
 import Sunny from '../sun.png';
+import {useEffect, useState} from 'react'
 
 function Weather({weathers}){
 
+    const [convert, setConvert] = useState(Boolean)
+    const [fade, setFade] = useState(Boolean)
 
+    const conversion = () => {
+        if (convert === false) {
+            setFade(true)
+            setTimeout(() => {
+                setConvert(true)
+            }, 100)
+            
+        } 
+        if (convert === true) {
+            setFade(false)
+            setTimeout(() => {
+                setConvert(false)
+            }, 100)
+        }       
+        // console.log(convert)
+    }
 
     const dateBuilder = (d) => {
         let months = ["January", "Feburuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -30,14 +49,21 @@ function Weather({weathers}){
                         <div className="weatherName">
                             
                             <div className="weatherType">
-                                <img className="weatherImage" src={Sunny} alt="" />
+                                <img className="weatherImage" src={`http://openweathermap.org/img/wn/${weathers.weather[0].icon}@2x.png`} alt="" />
                             </div>
                             <div className="degree">
-                                {Math.round(weathers.main.temp)}
-                            &#8451;
+                                {convert === true ?
+                                    <div className={`fahrenheit ${fade ? 'show-it' : 'hide-it'}`}>{Math.round(weathers.main.temp * 1.8) + 32} &#8457;</div>
+                                 :                                 
+                                    <div className={`celsius ${fade ? 'show-it' : 'hide-it'}`}>{Math.round(weathers.main.temp)} &#8451;</div>
+                                 }  
+                            
+                               
                             </div>
+                            
 
                         </div>
+                        <button className='convertbtn' onClick={() => conversion()}>{convert ? 'Celsius' : 'Fahrenheit'}</button>
                     </div>
 
                     <div className="line">
@@ -46,7 +72,7 @@ function Weather({weathers}){
 
 
                 <div className="weatherDetails">
-                    <div className="weatherTitle">what a sunny day!</div>
+                    <div className="weatherTitle">{weathers.weather[0].description}</div>
 
 
                    
@@ -89,19 +115,42 @@ function Weather({weathers}){
                     <div className="wind">
                         <p>min. temp</p>
                         <div className="windSpeed">
-                        <p>{Math.round(weathers.main.temp_min)}</p>
+                        <p>
+                            {/* {Math.round(weathers.main.temp_min)} */}
+                            {convert === true ?
+                                    <div className={` ${fade ? 'show-it' : 'hide-it'}`}>{Math.round(weathers.main.temp_min * 1.8) + 32}</div>
+                                 :                                 
+                                    <div className={` ${fade ? 'show-it' : 'hide-it'}`}>{Math.round(weathers.main.temp_min)}</div>
+                            }  
+                        </p>
                         
                         </div>
-                        <p>C</p>
+                        {convert === true ?
+                            <p>F</p>
+                         :
+                            <p>C</p>
+                         }
+                        
 
                     </div>
                     <div className="wind">
                         <p>max. temp</p>
                         <div className="windSpeed">
-                        <p>{Math.round(weathers.main.temp_max)}</p>
+                        <p>
+                            {/* {Math.round(weathers.main.temp_max)} */}
+                            {convert === true ?
+                                    <div className={` ${fade ? 'show-it' : 'hide-it'}`}>{Math.round(weathers.main.temp_max * 1.8) + 32}</div>
+                                 :                                 
+                                    <div className={` ${fade ? 'show-it' : 'hide-it'}`}>{Math.round(weathers.main.temp_max)}</div>
+                            }  
+                        </p>
                         
                         </div>
-                        <p>C</p>
+                        {convert === true ?
+                            <p>F</p>
+                         :
+                            <p>C</p>
+                         }
 
                     </div>
                     <div className="wind">
