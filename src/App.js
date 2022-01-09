@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import Weather from './components/WEATHER';
-import React, { useState } from 'react';
+// import Weather from './components/WEATHER';
+import React from 'react';
 import FRONTPAGE from './components/FRONTPAGE';
-import ERROR from './components/ERROR';
+// import ERROR from './components/ERROR';
 
 // const api = {
 //   key: "4ee7f25342979a8311be40961af3300f",

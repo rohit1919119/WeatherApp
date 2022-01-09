@@ -1,4 +1,4 @@
-import react from "react";
+// import react from "react";
 import Sunny from '../sun.png';
 
 function Weather({weathers}){

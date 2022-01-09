@@ -1,5 +1,5 @@
-import react from "react";
-import Dog from "../pug1.png";
+// import react from "react";
+// import Dog from "../pug1.png";
 import Doggy from '../dog.png';
 import './error.css';
 
